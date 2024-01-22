@@ -1,7 +1,7 @@
 $(() => {
 
 
-    $( "a" ).hide();
+    $( ".gitlink" ).hide();
 
     const controlTrack = () => {
         var check = true;
@@ -78,7 +78,7 @@ $(() => {
                 setTimeout(printLetter, 80);
               } else {
                 outputLength = 0;
-                $( "a" ).show(500);
+                $( ".gitlink" ).show(500);
                 controlTrack();
                 return;
               }
