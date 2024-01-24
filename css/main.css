@@ -16,9 +16,15 @@ body {
   flex-grow: 1;
 }
 
-@media screen and (max-width: 768px) {
-  img {
-      width: 50%;
-      height: auto;
-  }
+.typing-subtitle{
+  display: inline-block;
+  white-space: nowrap;
+  overflow:hidden;
+  border-right: 3px solid white;
+  animation: blink 1000ms step-end infinite;
+}
+
+@keyframes blink {
+  from, to {border-color: transparent}
+  50% {border-color: white;}
 }
