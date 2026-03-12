@@ -1,62 +1,570 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Essam Fahmy</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essam Fahmy — Full Stack Developer | Portfolio</title>
+    <meta name="description" content="Essam Fahmy is a Full Stack Developer specializing in React, Node.js, C#/.NET, and cloud technologies. Explore projects, experience, and skills. Based in London, Ontario, Canada." />
+    <meta name="keywords" content="Essam Fahmy, Full Stack Developer, Software Engineer, React, Node.js, C#, .NET, TypeScript, JavaScript, Azure, AWS, Docker, Portfolio, London Ontario" />
+    <meta name="author" content="Essam Fahmy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0f" />
     <meta name="google-site-verification" content="Tdeml8xzF7yA4C563Ic2MuAyXlPFzTx_V_mOaO2rRXE" />
-    <meta name="robots" content="noindex">
-    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" />
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="lib/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Essam Fahmy — Full Stack Developer" />
+    <meta property="og:description" content="Full Stack Developer building scalable cross-platform applications with React, Node.js, C#/.NET, and cloud technologies." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.essamfahmy.com" />
+    <meta property="og:image" content="https://www.essamfahmy.com/img/essamfahmy.jpg" />
+    <meta property="og:site_name" content="Essam Fahmy Portfolio" />
+    <meta property="og:locale" content="en_CA" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Essam Fahmy — Full Stack Developer" />
+    <meta name="twitter:description" content="Full Stack Developer building scalable cross-platform applications with React, Node.js, C#/.NET, and cloud technologies." />
+    <meta name="twitter:image" content="https://www.essamfahmy.com/img/essamfahmy.jpg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.essamfahmy.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-size='60' font-family='system-ui' font-weight='700' fill='white' text-anchor='middle'>EF</text></svg>" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Essam Fahmy",
+        "url": "https://www.essamfahmy.com",
+        "image": "https://www.essamfahmy.com/img/essamfahmy.jpg",
+        "jobTitle": "Full Stack Developer",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Fanshawe College"
+        },
+        "knowsAbout": ["React", "Node.js", "C#", ".NET", "TypeScript", "JavaScript", "ASP.NET Core", "SQL Server", "Azure", "AWS", "Docker", "Electron"],
+        "sameAs": [
+            "https://www.linkedin.com/in/essamfahmy"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "London",
+            "addressRegion": "Ontario",
+            "addressCountry": "CA"
+        }
+    }
+    </script>
 </head>
+<body>
+    <!-- Animated background canvas -->
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
 
-<!--Body-->
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Essam Fahmy - Home">
+                <span class="logo-text">EF</span>
+                <span class="logo-dot"></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <ul class="nav-links" id="navLinks" role="navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<body class="bg-dark">
-    <div class="main-content text-center">
+    <!-- Hero -->
+    <header class="hero" id="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge fade-up">
+                    <span class="status-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-name fade-up delay-1">
+                    Hi, I'm <span class="gradient-text">Essam Fahmy</span>
+                </h1>
+                <p class="hero-title fade-up delay-2">
+                    <span class="typing-wrapper">
+                        <span id="typingText"></span>
+                        <span class="cursor">|</span>
+                    </span>
+                </p>
+                <p class="hero-subtitle fade-up delay-3">I build scalable, high-performance applications across the full stack — from elegant UIs to robust back-end systems — using modern frameworks, languages, and cloud technologies.</p>
+                <div class="hero-actions fade-up delay-4">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Get in Touch
+                    </a>
+                    <a href="#experience" class="btn btn-ghost">
+                        View My Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-social fade-up delay-4">
+                    <a href="https://www.linkedin.com/in/essamfahmy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:essamfahmy1@outlook.com" aria-label="Email Essam">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual fade-up delay-2">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image-ring ring-2"></div>
+                    <img src="img/essamfahmy.jpg" alt="Essam Fahmy - Full Stack Developer" width="400" height="400" loading="eager" />
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator fade-up delay-4">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+    </header>
 
-        <div id="sub" class="text-center text-white mt-5 h1">
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+                <h2 class="section-title">Passionate about building <span class="gradient-text">impactful software</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p class="about-lead">I'm a Full Stack Developer with hands-on experience building scalable, high-performance applications across multiple platforms. I specialize in creating elegant solutions that combine intuitive user interfaces with robust back-end systems.</p>
+                    <p>With expertise spanning full-stack web development, cross-platform applications, and cloud infrastructure, I focus on delivering clean, maintainable code and exceptional user experiences. My experience ranges from leading greenfield projects to optimizing legacy systems, with proven success in performance improvements, technical collaboration, and rapid problem-solving.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-rocket"></i>
+                            <span>Performance-driven development</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Full-stack expertise</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud-native solutions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="270">0</span>
+                        </div>
+                        <span class="stat-label">Issues Resolved</span>
+                        <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 90%"></div></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="70">0</span><span class="stat-suffix">%</span>
+                        </div>
+                        <span class="stat-label">Performance Gain</span>
+                        <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 70%"></div></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <span class="stat-label">Years Experience</span>
+                        <div class="stat-bar"><div class="stat-bar-fill" style="--fill-width: 60%"></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-5 col-6 mx-auto mt-3 mb-3">
-            <img src="img/essamfahmy.jpg" class="rounded img-fluid" id="logo" />
-        </div>
-        <div id="sub2" class="text-center text-white mb-3 h1">
-        </div>
+    </section>
 
-        <div class="d-grid gap-2 col-8 col-sm-6 col-md-6 col-lg-5 col-xl-5 col-xxl-3 mx-auto">
-            <a href="https://gitfront.io/r/essamfahmy/CjYtK2scnUeq/ASP.NET/" class="btn btn-outline-light rounded-pill gitlink"
-                role="button" target="_blank">ASP.NET</a>
-            <a href="https://gitfront.io/r/essamfahmy/kHPL6SnUKKcF/CPP/" class="btn btn-outline-light rounded-pill gitlink"
-                role="button" target="_blank">C/C++</a>
-            <a href="https://gitfront.io/r/essamfahmy/2oTMJNjF92AU/Data-Structures-and-Algorithms/"
-                class="btn btn-outline-light rounded-pill gitlink" role="button" target="_blank">Data Structures and Algorithms</a>
-            <a href="https://gitfront.io/r/essamfahmy/vvb4jvyKbcFp/Declarative-Languages/"
-                class="btn btn-outline-light rounded-pill gitlink" role="button" target="_blank">Declarative Languages</a>
-            <a href="https://gitfront.io/r/essamfahmy/gKScxqALSnfG/Java/" class="btn btn-outline-light rounded-pill gitlink"
-                role="button" target="_blank">Java</a>
-            <a href="https://gitfront.io/r/essamfahmy/t7X1NtfAgPQJ/SQL/" class="btn btn-outline-light rounded-pill gitlink"
-                role="button" target="_blank">SQL</a>
-            <a href="https://gitfront.io/r/essamfahmy/CHFNiABsppYC/web-scripting/" class="btn btn-outline-light rounded-pill gitlink"
-                role="button" target="_blank">Web Scripting</a>
+    <!-- Experience -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Experience</span>
+                <h2 class="section-title">Where I've <span class="gradient-text">made an impact</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Developer &amp; Support Specialist Co-op</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Western University</p>
+                            </div>
+                            <span class="timeline-date">May 2025 — Aug 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Designed and developed scalable cross-platform campus kiosk applications using React, Electron, TypeScript, and Node.js</li>
+                            <li>Resolved 1,500+ incidents across software, identity, VPN, and enterprise systems</li>
+                            <li>Administered identity lifecycle management and MFA for thousands of users, ensuring secure access</li>
+                            <li>Supported Microsoft 365, Brightspace LMS, and Fortinet VPN environments with troubleshooting and user support</li>
+                            <li>Utilized structured iOS test plans and Splunk log analysis to identify, document, and resolve application issues efficiently</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="mini-tag">React</span>
+                            <span class="mini-tag">Electron</span>
+                            <span class="mini-tag">TypeScript</span>
+                            <span class="mini-tag">Node.js</span>
+                            <span class="mini-tag">Splunk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Developer Co-op</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Plexus International</p>
+                            </div>
+                            <span class="timeline-date">Jan 2024 — Dec 2024</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed software for manufacturing engineers at leading automotive companies including GM, Ford, Toyota, and Honda</li>
+                            <li>Enhanced back-end system performance by 70% through ASP.NET Core, C#, and optimized SQL Server queries</li>
+                            <li>Led implementation of real-time communication using Signal-R with instantaneous updates and data synchronization</li>
+                            <li>Built intuitive, high-performance UIs using TypeScript, LESS, SCSS, and DevExtreme components</li>
+                            <li>Collaborated with QA teams to resolve 270+ software issues, reducing bug backlog by 60% with 100+ Jira tickets managed</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="mini-tag">C#</span>
+                            <span class="mini-tag">ASP.NET Core</span>
+                            <span class="mini-tag">SQL Server</span>
+                            <span class="mini-tag">SignalR</span>
+                            <span class="mini-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Apple Technical Support Representative</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Transcom</p>
+                            </div>
+                            <span class="timeline-date">Dec 2020 — Dec 2021</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Successfully handled and resolved over 1,000 customer calls and technical issues, meeting performance targets</li>
+                            <li>Researched and developed effective solutions using technical manuals, user guides, and analytical tools</li>
+                            <li>Collaborated across departments and with external companies, achieving 100% compliance with Apple QA standards</li>
+                            <li>Created comprehensive problem-solution log, significantly boosting team efficiency and achieving 95%+ CSAT score</li>
+                            <li>Engaged regularly in product training to maintain expertise in new launches and contribute to team effectiveness</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="mini-tag">Technical Support</span>
+                            <span class="mini-tag">Apple Ecosystem</span>
+                            <span class="mini-tag">QA Standards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-code"></i> Skills</span>
+                <h2 class="section-title">My <span class="gradient-text">tech stack</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">C/C++</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">Vue</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">LESS/SCSS</span>
+                        <span class="tag">DevExtreme</span>
+                        <span class="tag">jQuery</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">ASP.NET Core</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">SignalR</span>
+                        <span class="tag">GraphQL</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">gRPC</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">LINQ</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <h3>Tools &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git/GitHub</span>
+                        <span class="tag">Visual Studio</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Jira</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Electron</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card reveal">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-flask-vial"></i>
+                    </div>
+                    <h3>Testing &amp; ML</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Cypress</span>
+                        <span class="tag">JUnit</span>
+                        <span class="tag">GTest</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Splunk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-trophy"></i> Achievements</span>
+                <h2 class="section-title">Highlights &amp; <span class="gradient-text">accomplishments</span></h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                    <div class="achievement-content">
+                        <h3>Dean's Honour Roll</h3>
+                        <p>Fanshawe College</p>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="achievement-content">
+                        <h3>70% Backend Performance Boost</h3>
+                        <p>Plexus International</p>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                    <div class="achievement-content">
+                        <h3>95%+ Customer Satisfaction</h3>
+                        <p>Transcom / Apple Support</p>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-check-double"></i></div>
+                    <div class="achievement-content">
+                        <h3>1,500+ Incidents Resolved</h3>
+                        <p>Western University</p>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-bug-slash"></i></div>
+                    <div class="achievement-content">
+                        <h3>60% Bug Backlog Reduction</h3>
+                        <p>Plexus International</p>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-headset"></i></div>
+                    <div class="achievement-content">
+                        <h3>1,000+ Customer Issues Resolved</h3>
+                        <p>Transcom / Apple Support</p>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="achievement-content">
+                        <h3>100% Apple QA Compliance</h3>
+                        <p>Transcom</p>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card reveal">
+                    <div class="achievement-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="achievement-content">
+                        <h3>100+ Jira Tickets Managed</h3>
+                        <p>Plexus International</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> Education</span>
+                <h2 class="section-title">Academic <span class="gradient-text">background</span></h2>
+            </div>
+            <div class="edu-card glass-card reveal">
+                <div class="edu-icon-wrapper">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="edu-details">
+                    <h3>Advanced Diploma in Computer Programming and Analysis (Co-op)</h3>
+                    <p class="edu-school"><i class="fas fa-map-marker-alt"></i> Fanshawe College — London, Ontario</p>
+                    <p class="edu-year"><i class="fas fa-calendar"></i> January 2022 — December 2025</p>
+                    <div class="edu-badge">
+                        <i class="fas fa-award"></i> Dean's Honour Roll
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+                <h2 class="section-title">Let's <span class="gradient-text">work together</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-text reveal">
+                    <p class="contact-intro">Have a project in mind or want to discuss opportunities? I'd love to hear from you. Let's build something great together.</p>
+                </div>
+                <div class="contact-cards reveal">
+                    <a href="mailto:essamfahmy1@outlook.com" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">essamfahmy1@outlook.com</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    <a href="tel:+1-226-559-6995" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+1 (226) 559-6995</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/essamfahmy" target="_blank" rel="noopener noreferrer" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/essamfahmy</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="text-center text-white">
-        <!-- Copyright -->
-        <div class="text-center p-3 mt-5" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2024 Copyright:
-            <a class="text-white" href="#">essamfahmy.com</a>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <span class="footer-logo">EF<span class="logo-dot"></span></span>
+                <p>&copy; 2026 Essam Fahmy</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/essamfahmy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:essamfahmy1@outlook.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <!--Bootstrap and Functionality Script Tags-->
-
-    <script src="lib/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
 </body>
-
 </html>
