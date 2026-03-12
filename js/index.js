@@ -13,8 +13,10 @@
         let mouseY = -1000;
 
         function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            canvas.width = w;
+            canvas.height = h;
         }
 
         function createParticles() {
@@ -160,9 +162,9 @@
             'Cloud Solutions Builder'
         ];
         let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 80;
+        let charIndex = phrases[0].length;
+        let isDeleting = true;
+        let typeSpeed = 40;
 
         function typeEffect() {
             const currentPhrase = phrases[phraseIndex];
@@ -189,7 +191,7 @@
             setTimeout(typeEffect, typeSpeed);
         }
 
-        setTimeout(typeEffect, 800);
+        setTimeout(typeEffect, 2000);
     }
 
     // ========================================
